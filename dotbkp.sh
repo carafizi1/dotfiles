@@ -1,33 +1,30 @@
 #!/bin/sh
 
-# A little modification of Chandu's script, all credit to https://chandujs.dev/
-# https://chandujs.dev/blog/backup-your-dotfiles-with-a-simple-bash-script-5hn2/
+# Fork of *Chandu J S* script. 
+# Copyright (c) chandujs.dev
 
 # This function copy files mentioned inside `backup.conf` to the root of the project.
-dotbkp() {
+# file to look for the paths to backup.
+backupPaths="./backup.conf"
 
-  # file to look for the paths to backup.
-  backupPaths="./backup.conf"
+homeDirectory=~
 
-  homeDirectory=~
-  
-  # Clean previous cache
-  rm -rf cache
-  mkdir cache
+# Clean previous configurations
+rm -rf configurations
+mkdir configurations
 
 
-  # looping through the list & avoiding the empty spaces
-  sed '/^[ \t]*$/d' $backupPaths | while read filePath; do
-    # find & replace for ~ with home path
-    findThis="~/"
-    replaceWith="$homeDirectory/"
-    originalFile="${filePath//${findThis}/${replaceWith}}"
+# looping through the list & avoiding the empty spaces
+sed '/^[ \t]*$/d' $backupPaths | while read filePath; do
+  # find & replace for ~ with home path
+  findThis="~/"
+  replaceWith="$homeDirectory/"
+  originalFile="${filePath//${findThis}/${replaceWith}}"
 
-    # copy the files
-    cp --parents --recursive $originalFile ./cache
-    sleep 0.05
-  done
+  echo $originalFile
 
-  git add .
-  echo -e "Backup finished! You can review & commit your changes."
-}
+  # copy the files
+  cp --parents --recursive $originalFile ./configurations
+done
+
+echo -e "finished"
