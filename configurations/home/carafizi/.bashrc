@@ -35,3 +35,5 @@ parse_git_branch() {
 
 # Custom prompt
 export PS1="\u@\h \[\e[32m\]\w \[\e[91m\]\$(parse_git_branch)\[\e[00m\]$ "
+
+source /home/carafizi/.config/broot/launcher/bash/br

@@ -2,4 +2,4 @@
 	email = gabecarafizi@gmail.com
 	name = Gabriel Carafizi
 [core]
-	editor = code --wait
+	editor = codium --wait

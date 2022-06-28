@@ -48,6 +48,11 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
+# stop screen from going blank
+xset s off
+xset -dpms
+xset noblank
+
 # Faster key repeat and delay
 xset r rate 210 40
 
