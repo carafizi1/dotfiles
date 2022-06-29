@@ -21,8 +21,6 @@ sed '/^[ \t]*$/d' $backupPaths | while read filePath; do
   replaceWith="$homeDirectory/"
   originalFile="${filePath//${findThis}/${replaceWith}}"
 
-  echo $originalFile
-
   # copy the files
   cp --parents --recursive $originalFile ./configurations
 done
