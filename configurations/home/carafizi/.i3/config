@@ -35,7 +35,6 @@ font pango:DejaVu Sans Mono 8
 # exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
@@ -195,9 +194,11 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# Border configuration
+for_window [class=".*"] border pixel 2
+gaps inner 7
+hide_edge_borders smart
+smart_gaps on
+
 # Execute polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
-# Gaps configuration
-for_window [class=".*"] border pixel 0
-gaps inner 6
