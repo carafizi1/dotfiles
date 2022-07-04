@@ -195,10 +195,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Border configuration
-for_window [class=".*"] border pixel 2
-gaps inner 7
+for_window [class=".*"] border pixel 0
+gaps inner 15
 hide_edge_borders smart
-smart_gaps on
 
 # Execute polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
