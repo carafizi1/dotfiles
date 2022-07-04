@@ -68,8 +68,5 @@ xinput --set-prop 8 'libinput Accel Speed' -1
 # load RGB profile
 openrgb -p systemdefault
 
-# start picom
-picom --experimental-backends -b
-
 # starts window managers
 exec i3

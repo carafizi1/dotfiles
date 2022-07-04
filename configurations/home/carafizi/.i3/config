@@ -199,5 +199,7 @@ for_window [class=".*"] border pixel 0
 gaps inner 15
 hide_edge_borders smart
 
-# Execute polybar
+
+# Execute polybar & picom
+exec_always --no-startup-id picom --experimental-backends -b
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
