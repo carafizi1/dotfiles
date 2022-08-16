@@ -54,6 +54,9 @@ bindsym $mod+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+Shift+q kill
 
+# start filemanager
+bindsym $mod+t exec pcmanfm
+
 # lock the screen
 bindsym $mod+Shift+x exec i3lock -c 000000 
 

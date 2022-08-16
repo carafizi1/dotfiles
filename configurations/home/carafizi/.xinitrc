@@ -63,7 +63,7 @@ xrandr --output DisplayPort-0 --primary --mode 1920x1080 --rate 165.00 --set Tea
 feh --randomize --bg-fill ~/Pictures/Wallpapers/*
 
 # configure mouse high DPI mouse
-xinput --set-prop 8 'libinput Accel Speed' -1
+xinput --set-prop 10 'libinput Accel Speed' -1
 
 # load RGB profile
 openrgb -p systemdefault
