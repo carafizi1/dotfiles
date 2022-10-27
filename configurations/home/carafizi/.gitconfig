@@ -2,4 +2,8 @@
 	email = gabecarafizi@gmail.com
 	name = Gabriel Carafizi
 [core]
-	editor = codium --wait
+	editor = nvim
+[push]
+	autoSetupRemote = true
+[pull]
+	rebase = false

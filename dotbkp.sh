@@ -24,5 +24,3 @@ sed '/^[ \t]*$/d' $backupPaths | while read filePath; do
   # copy the files
   cp --parents --recursive $originalFile ./configurations
 done
-
-echo -e "finished"
