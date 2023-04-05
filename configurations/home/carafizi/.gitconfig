@@ -1,8 +1,8 @@
 [user]
-	email = gabecarafizi@gmail.com
+	email = gabriel@carafizi.com
 	name = Gabriel Carafizi
 [core]
-	editor = nvim
+	editor = vim
 [push]
 	autoSetupRemote = true
 [pull]
