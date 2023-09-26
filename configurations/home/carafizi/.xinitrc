@@ -57,8 +57,8 @@ xset noblank
 xset r rate 210 40
 
 # configure monitors
-xrandr --output DisplayPort-0 --primary --mode 1920x1080 --rate 165.00 --output HDMI-A-0 --mode 1920x1080 --rate 60.00 --left-of DisplayPort-0
-
+xrandr --output DisplayPort-1 --primary --mode 1920x1080 --rate 165.00 
+xrandr --output HDMI-A-0 --mode 1920x1080 --rate 60.00 --left-of DisplayPort-1
 # load random wallpaper
 feh --randomize --bg-fill ~/Pictures/Wallpapers/*
 
