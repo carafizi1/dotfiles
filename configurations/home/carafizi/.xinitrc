@@ -63,7 +63,7 @@ xrandr --output HDMI-A-0 --mode 1920x1080 --rate 60.00 --left-of DisplayPort-1
 feh --randomize --bg-fill ~/Pictures/Wallpapers/*
 
 # configure mouse high DPI mouse
-xinput --set-prop 'Logitech G203 LIGHTSYNC Gaming Mouse' 'libinput Accel Speed' -1
+xinput --set-prop "Logitech G203 LIGHTSYNC Gaming Mouse" "306" -1
 
 # load RGB profile
 openrgb -p systemdefault
