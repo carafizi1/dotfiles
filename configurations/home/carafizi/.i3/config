@@ -204,6 +204,18 @@ gaps inner 15
 hide_edge_borders smart
 
 
-# Execute polybar & picom
+# Start picom
 exec_always --no-startup-id picom -b
+
+# Start polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# Configure mouse dpi
+exec_always --no-startup-id xinput --set-prop 8 306 -0.7
+exec_always --no-startup-id xinput --set-prop 8 309 0 1
+
+# Start open-rgb
+exec_always --no-startup-id openrgb -p standard
+
+# load random wallpaper
+exec_always --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers/*
