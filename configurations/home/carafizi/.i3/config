@@ -211,8 +211,7 @@ exec_always --no-startup-id picom -b
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Configure mouse dpi
-exec_always --no-startup-id xinput --set-prop 12 306 -0.7
-exec_always --no-startup-id xinput --set-prop 12 309 0 1
+exec_always --no-startup-id xinput --set-prop "Logitech G203 LIGHTSYNC Gaming Mouse" 'libinput Accel Speed' -1
 
 # Start open-rgb
 exec_always --no-startup-id openrgb -p standard
